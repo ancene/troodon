@@ -17,7 +17,7 @@
     ├── LICENSE
     ├── mod.ts          # just import this file to use this library
     ├── README.md
-    └── trodoon.jpg     # mascot : Powered by [toppng](https://toppng.com/show_download/65861/dinosaur-train-troodon/large) and [vectorstock](https://www.vectorstock.com/royalty-free-vector/flag-of-indonesia-grunge-abstract-brush-stroke-vector-22275479)
+    └── trodoon.jpg     # mascot : Powered by toppng.com and vectorstock.com
 
 ## Features
 
