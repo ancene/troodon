@@ -30,7 +30,7 @@
 
 ## Run Application Test
 
-deno run ./Test/TopsisTest.ts
+    deno test
 
 ## License
 
