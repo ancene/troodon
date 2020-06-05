@@ -7,11 +7,11 @@
 ## Project Structure
 
     Troodon             # Project Name
-    ├── Algorithms      # List of Algorithm
+    ├── algorithms      # List of Algorithm
     | └── ...
-    ├── Examples        # List of Example Algorithm Usage
+    ├── examples        # List of Example Algorithm Usage
     │ └── ...
-    ├── Tests           # List of Algorithm Test
+    ├── tests           # List of Algorithm Test
     │ └── ...
     ├── .gitignore
     ├── LICENSE
