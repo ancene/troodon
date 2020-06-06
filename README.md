@@ -1,4 +1,4 @@
-![examples](troodon.jpg)(#)
+[![Troodon](https://raw.githubusercontent.com/shandysiswandi/troodon/master/troodon.jpg)](#)
 
 [![tag](https://img.shields.io/github/tag/shandysiswandi/troodon.svg)](https://github.com/shandysiswandi/troodon)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/shandysiswandi/troodon/blob/master/LICENSE)
