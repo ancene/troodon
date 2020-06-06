@@ -27,6 +27,12 @@
 
 - [x] [Topsis](https://en.wikipedia.org/wiki/TOPSIS) algorithm.
 - [ ] [Analytic Hierarchy Process / AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) algorithm.
+- [ ] [C 4.5](https://en.wikipedia.org/wiki/C4.5_algorithm) algorithm.
+- [ ] [K-Means](https://en.wikipedia.org/wiki/K-means_clustering) algorithm.
+- [ ] [Support Vector Machines / SVM](https://en.wikipedia.org/wiki/Support_vector_machine) algorithm.
+- [ ] [Apriori](https://en.wikipedia.org/wiki/Apriori_algorithm) algorithm.
+- [ ] [k-Nearest Neighbors / KNN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) algorithm.
+- [ ] [Naive Bayes](https://en.wikipedia.org/wiki/Naive_Bayes_classifier) algorithm.
 
 ## Run Example
 
