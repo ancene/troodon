@@ -1,5 +1,5 @@
-import { assertEquals } from "./mod.ts";
+import { assertEquals, Topsis } from "./mod.ts";
 
-Deno.test("test one", () => {
-  assertEquals(1 + 1, 2);
-});
+/**
+ * Topsis Algorithm Test
+ */
