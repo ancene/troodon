@@ -1,4 +1,8 @@
-![examples](troodon.jpg)
+![examples](troodon.jpg)(#)
+
+[![tag](https://img.shields.io/github/tag/shandysiswandi/troodon.svg)](https://github.com/shandysiswandi/troodon)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/shandysiswandi/troodon/blob/master/LICENSE)
+[![tag](https://img.shields.io/badge/deno->=1.0.0-green.svg)](https://github.com/denoland/deno)
 
 ## About Dinosaurs
 
@@ -24,11 +28,11 @@
 - [x] [Topsis](https://en.wikipedia.org/wiki/TOPSIS) algorithm.
 - [ ] [Analytic Hierarchy Process / AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) algorithm.
 
-## Run Application Example
+## Run Example
 
-    deno run ./Examples/TopsisExample.ts
+    deno run ./examples/topsis_example.ts
 
-## Run Application Test
+## Run Test
 
     deno test
 
