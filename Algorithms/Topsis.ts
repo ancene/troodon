@@ -1,22 +1,50 @@
-/*
+/**
  * References : https://en.wikipedia.org/wiki/TOPSIS
- *
  */
+
 class Topsis {
-  public numbers: Number;
-  private paragraf: Array<String>;
+  private alternative: Array<number> | Array<string>;
+  private criteria: Array<number> | Array<string>;
+  private sample: Array<number> | Array<string>;
+  private weight: Array<number> | Array<string>;
 
-  constructor(input?: number) {
-    this.numbers = 1;
-    this.paragraf = ["tes"];
+  constructor() {
+    this.alternative = [];
+    this.criteria = [];
+    this.sample = [];
+    this.weight = [];
   }
 
-  public calc(params: Number): Number {
-    return params;
+  get getAlternative() {
+    return this.alternative;
   }
 
-  private result(params: string): number {
-    return parseInt(params);
+  set setAlternative(params: number[] | string[]) {
+    this.alternative = params;
+  }
+
+  get getCriteria() {
+    return this.criteria;
+  }
+
+  set setCriteria(params: number) {
+    this.criteria = params;
+  }
+
+  get getSample() {
+    return this.sample;
+  }
+
+  set setSample(params: number) {
+    this.sample = params;
+  }
+
+  get getWeight() {
+    return this.weight;
+  }
+
+  set setWeight(params: number) {
+    this.weight = params;
   }
 }
 
