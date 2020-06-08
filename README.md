@@ -1,6 +1,6 @@
 [![Troodon](https://raw.githubusercontent.com/shandysiswandi/troodon/master/troodon.jpg)](#)
 
-[![tag](https://img.shields.io/github/tag/shandysiswandi/troodon.svg)](https://github.com/shandysiswandi/troodon)
+[![tag](https://img.shields.io/github/v/tag/shandysiswandi/troodon.svg?sort=semver)](https://github.com/shandysiswandi/troodon)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/shandysiswandi/troodon/blob/master/LICENSE)
 [![tag](https://img.shields.io/badge/deno->=1.0.0-green.svg)](https://github.com/denoland/deno)
 
