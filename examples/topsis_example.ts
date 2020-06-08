@@ -24,10 +24,6 @@ SOFTWARE.
 import { Topsis } from "../mod.ts";
 
 /**
- * Reference Sample Problems : ...
- */
-
-/**
  * @argument Array<string>
  * alternatives
  */
@@ -54,16 +50,9 @@ const weight: Array<number> = [5, 3, 4, 2, 5];
  * @param ArrayOfNumberOrString (alternatives)
  * @param ArrayOfArrayOfNumber (criterias)
  * @param ArrayOfNumber (weight)
- * @param Boolean default false
- * Result of Topsis Process
+ * @param Boolean default false, change to true for show process
+ * Result of Topsis Process or ranking of alternatives
  */
-// new Topsis(["a"], [], [])
-//   .result()
-//   .then((result) => console.log(result))
-//   .catch((error) => console.log(error));
 
-new Topsis(alternatives, criterias, weight)
-  .result()
-  .then((result) => console.log(result))
-  .catch((error) => console.log(error))
-  .finally(() => console.log("-----* TOPSIS Algorithm *-----"));
+const example = new Topsis(alternatives, criterias, weight).result();
+console.log(example);

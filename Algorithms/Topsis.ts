@@ -74,7 +74,7 @@ class Topsis {
    * @return Array<Array<number>>
    * matrixNormalization
    */
-  private async normalizationMatrix(): Promise<Array<Array<number>>> {
+  private normalizationMatrix(): Array<Array<number>> {
     const sum: Array<number> = [];
     const root: Array<number> = [];
     const square: Array<Array<number>> = [];
@@ -114,8 +114,8 @@ class Topsis {
    * @return Array<Array<number>>
    * matrixNormalization
    */
-  private async weightedNormalizationMatrix(): Promise<Array<Array<number>>> {
-    const divide = await this.normalizationMatrix();
+  private weightedNormalizationMatrix(): Array<Array<number>> {
+    const divide = this.normalizationMatrix();
     const result: Array<Array<number>> = [];
 
     divide.forEach((values) => {
@@ -130,8 +130,8 @@ class Topsis {
    * @return Array<number>
    * Value of Positive Ideal Solutions
    */
-  private async aMax(): Promise<Array<number>> {
-    const multiple = await this.weightedNormalizationMatrix();
+  private aMax(): Array<number> {
+    const multiple = this.weightedNormalizationMatrix();
     const result: Array<number> = [];
 
     this.weights.forEach((_, index) => {
@@ -151,8 +151,8 @@ class Topsis {
    * @return Array<number>
    * Value of Negative Ideal Solutions
    */
-  private async aMin(): Promise<Array<number>> {
-    const multiple = await this.weightedNormalizationMatrix();
+  private aMin(): Array<number> {
+    const multiple = this.weightedNormalizationMatrix();
     const result: Array<number> = [];
 
     this.weights.forEach((_, index) => {
@@ -172,9 +172,9 @@ class Topsis {
    * @return Array<number>
    * Determine the distance between the value of each alternative and the value of a positive ideal solution
    */
-  private async dMax(): Promise<Array<number>> {
-    const multiple = await this.weightedNormalizationMatrix();
-    const max = await this.aMax();
+  private dMax(): Array<number> {
+    const multiple = this.weightedNormalizationMatrix();
+    const max = this.aMax();
     const result: Array<number> = [];
 
     multiple.forEach((values) => {
@@ -192,9 +192,9 @@ class Topsis {
    * @return Array<number>
    * Determine the distance between the value of each alternative and the value of a negative ideal solution
    */
-  private async dMin(): Promise<Array<number>> {
-    const multiple = await this.weightedNormalizationMatrix();
-    const min = await this.aMin();
+  private dMin(): Array<number> {
+    const multiple = this.weightedNormalizationMatrix();
+    const min = this.aMin();
     const result: Array<number> = [];
 
     multiple.forEach((values) => {
@@ -212,9 +212,9 @@ class Topsis {
    * @param vararg
    * Determine the preference value for each alternative
    */
-  private async preferences(): Promise<Array<number>> {
-    const dMax = await this.dMax();
-    const dMin = await this.dMin();
+  private preferences(): Array<number> {
+    const dMax = this.dMax();
+    const dMin = this.dMin();
     const result: Array<number> = [];
 
     for (let i = 0; i < dMax.length; i++) {
@@ -230,9 +230,9 @@ class Topsis {
    * @param vararg
    * sorting value from preferences (high to low)
    */
-  private async ranking() {
+  private ranking(): Array<string> {
     const alternatives = this.alternatives;
-    const preferences = await this.preferences();
+    const preferences = this.preferences();
     const result = Object.fromEntries(
       alternatives.map((_, i) => [alternatives[i], preferences[i]])
     );
@@ -240,18 +240,19 @@ class Topsis {
       .sort((a, b) => result[a] - result[b])
       .reverse();
 
-    await this.showProcess(result, "Preferences to Object");
+    this.showProcess(result, "Preferences to Object");
 
     return sorted;
   }
 
   /**
    * @return void
+   * show topsis process
    */
-  private async showProcess(vararg: any, name: string = ""): Promise<void> {
+  private showProcess(vararg: any, name: string = ""): void {
     if (this.process) {
       console.log(`START: ${name}`);
-      console.table(await vararg);
+      console.table(vararg);
       console.log(`END  : ${name}`);
       console.log("");
     }
@@ -260,7 +261,7 @@ class Topsis {
   /**
    * @return any
    */
-  public async result(): Promise<any> {
+  public result(): any {
     if (!this.validation()) {
       console.error(
         "Please check your argument, make sure the arguments follows the rules of use."
@@ -269,37 +270,37 @@ class Topsis {
     }
 
     const alternatives = this.alternatives;
-    await this.showProcess(alternatives, "Alternatives");
+    this.showProcess(alternatives, "Alternatives");
 
     const criterias = this.criterias;
-    await this.showProcess(criterias, "Criterias");
+    this.showProcess(criterias, "Criterias");
 
     const weights = this.weights;
     this.showProcess(weights, "Weights");
 
-    const ndm = await this.normalizationMatrix();
-    await this.showProcess(ndm, "Normalized Decision Matrix");
+    const ndm = this.normalizationMatrix();
+    this.showProcess(ndm, "Normalized Decision Matrix");
 
-    const wndm = await this.weightedNormalizationMatrix();
-    await this.showProcess(wndm, "Weighted Normalized Decision Matrix");
+    const wndm = this.weightedNormalizationMatrix();
+    this.showProcess(wndm, "Weighted Normalized Decision Matrix");
 
-    const aMax = await this.aMax();
-    await this.showProcess(aMax, "Value of Positive Ideal Solutions");
+    const aMax = this.aMax();
+    this.showProcess(aMax, "Value of Positive Ideal Solutions");
 
-    const aMin = await this.aMin();
-    await this.showProcess(aMin, "Value of Negative Ideal Solutions");
+    const aMin = this.aMin();
+    this.showProcess(aMin, "Value of Negative Ideal Solutions");
 
-    const dMax = await this.dMax();
-    await this.showProcess(dMax, "Distance of Positive Ideal Solutions");
+    const dMax = this.dMax();
+    this.showProcess(dMax, "Distance of Positive Ideal Solutions");
 
-    const dMin = await this.dMin();
-    await this.showProcess(dMin, "Distance of Negative Ideal Solutions");
+    const dMin = this.dMin();
+    this.showProcess(dMin, "Distance of Negative Ideal Solutions");
 
-    const preference = await this.preferences();
-    await this.showProcess(preference, "Preferences");
+    const preference = this.preferences();
+    this.showProcess(preference, "Preferences");
 
-    const ranking = await this.ranking();
-    await this.showProcess(ranking, "Ranking of Preferences");
+    const ranking = this.ranking();
+    this.showProcess(ranking, "Ranking of Preferences");
 
     return this.process ? "" : ranking;
   }
