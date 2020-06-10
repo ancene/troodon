@@ -25,8 +25,8 @@ SOFTWARE.
  */
 
 enum Attribute {
-  BENEFIT = "BENEFIT",
-  COST = "COST",
+  BENEFIT,
+  COST,
 }
 
 class SAW {
@@ -51,48 +51,91 @@ class SAW {
   }
 
   /**
-   * @return true OR false
-   * validation for every argument
+   * @return void
+   * function for error validation
    */
-  private validation(): boolean {
-    if (!(this.alternatives.length > 0)) {
-      console.log("Alternatives Empty");
-      return false;
-    }
-
-    if (!(this.criterias.length > 0)) {
-      console.log("Row of Criterias Empty");
-      return false;
-    }
-    if (!(this.criterias[0].length > 0)) {
-      console.log("Column of Criterias Empty");
-      return false;
-    }
-
-    if (!(this.weights.length > 0)) {
-      console.log("Weights Empty");
-      return false;
-    }
-
-    if (!(this.weights.length === this.criterias[0].length)) {
-      console.log("Weights Length Not Equal with Column Length of Criterias");
-      return false;
-    }
-    if (!(this.attributes.length === this.criterias[0].length)) {
-      console.log(
-        "Attributes Length Not Equal with Column Length of Criterias"
-      );
-      return false;
-    }
-    return true;
+  private log(msg: string): void {
+    console.log(msg);
+    console.log(
+      "Please check your argument, make sure the arguments follows the rules of use."
+    );
+    Deno.exit(0);
   }
 
   /**
-   * @return number[]
-   * convert each number to percent
+   * @return void
+   * check alternatives
    */
-  private weightToPercent(): Array<number> {
-    return [...this.weights.map((value) => value / 100)];
+  private checkAlternatives(): void {
+    if (!(this.alternatives.length > 0)) this.log("Alternatives empty");
+
+    this.alternatives.forEach((value) => {
+      if (value === "" || value.trim() === "")
+        this.log("value of Alternatives at least must be one character");
+    });
+  }
+
+  /**
+   * @return void
+   * check criterias
+   */
+  private checkCriterias(): void {
+    if (!(this.criterias.length > 0)) this.log("row of Criterias are empty");
+
+    if (this.criterias.length !== this.alternatives.length)
+      this.log(
+        "row length of Criterias is not equal with The Alternative length"
+      );
+
+    this.criterias.forEach((values, indexes) => {
+      if (!(values.length > 0))
+        this.log(`column ${indexes} of Criterias are empty`);
+
+      if (values.length !== this.weights.length)
+        this.log(
+          `column ${indexes} length of Criterias is not equal with The Weights length`
+        );
+
+      if (values.length !== this.attributes.length)
+        this.log(
+          `The Attributes length of Criterias is not equal with The Weights length`
+        );
+    });
+  }
+
+  /**
+   * @return void
+   * check weights
+   */
+  private checkWeights(): void {
+    if (!(this.weights.length > 0)) this.log("Weights are empty");
+
+    let count: number = 0;
+    this.weights.forEach((value) => {
+      count += value;
+      if (!Number.isInteger(value))
+        this.log(`value ${value} of Weights is not integer`);
+    });
+
+    if (count != 100) this.log("total value of weights must be 100");
+  }
+
+  /**
+   * @return void
+   * switch Matrix (row to column)
+   */
+  private switchMatrix(): Array<Array<number>> {
+    const result: Array<Array<number>> = [];
+
+    this.weights.forEach((_, index) => {
+      let temp: Array<number> = [];
+      this.criterias.forEach((_, indexes) => {
+        temp.push(this.criterias[indexes][index]);
+      });
+      result.push(temp);
+    });
+
+    return result;
   }
 
   /**
@@ -100,16 +143,8 @@ class SAW {
    * new array column to row
    */
   private attributeOfColumn(): Array<number> {
-    const attributes: Array<Array<number>> = [];
+    const attributes = this.switchMatrix();
     const result: Array<number> = [];
-
-    this.weights.forEach((_, index) => {
-      let temp: Array<number> = [];
-      this.criterias.forEach((_, indexes) => {
-        temp.push(this.criterias[indexes][index]);
-      });
-      attributes.push(temp);
-    });
 
     this.attributes.forEach((value, index) => {
       if (value === Attribute.BENEFIT) {
@@ -146,6 +181,14 @@ class SAW {
 
   /**
    * @return number[]
+   * convert each number to percent
+   */
+  private weightToPercent(): Array<number> {
+    return [...this.weights.map((value) => value / 100)];
+  }
+
+  /**
+   * @return number[]
    * weighted normalization
    */
   private weightedNormalization(): Array<number> {
@@ -163,7 +206,7 @@ class SAW {
   }
 
   /**
-   * @param vararg
+   * @return string[]
    * sorting value from weightedNormalization (high to low)
    */
   private ranking(): Array<string> {
@@ -178,14 +221,12 @@ class SAW {
       .sort((a, b) => result[a] - result[b])
       .reverse();
 
-    // this.showProcess(result, "Weighted Normalization to Object");
-
     return sorted;
   }
 
   /**
    * @return void
-   * show topsis process
+   * show class process if process true
    */
   private showProcess(vararg: any, name: string = ""): void {
     if (this.process) {
@@ -196,13 +237,14 @@ class SAW {
     }
   }
 
-  public result() {
-    if (!this.validation()) {
-      console.error(
-        "Please check your argument, make sure the arguments follows the rules of use."
-      );
-      Deno.exit(0);
-    }
+  /**
+   * @return void
+   * call all process function in this class
+   */
+  public result(): any {
+    this.checkAlternatives();
+    this.checkCriterias();
+    this.checkWeights();
 
     const alternatives = this.alternatives;
     this.showProcess(alternatives, "Alternatives");
@@ -215,9 +257,6 @@ class SAW {
 
     const attributes = this.attributes;
     this.showProcess(attributes, "Attributes");
-
-    const wtp = this.weightToPercent();
-    this.showProcess(wtp, "Weight to Percent");
 
     const aoc = this.attributeOfColumn();
     this.showProcess(aoc, "Attribute Of Column");
