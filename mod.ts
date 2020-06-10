@@ -20,4 +20,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ***************************************************************************** */
 
-export { Topsis } from "./algorithms/mod.ts";
+export { Topsis, SAW, AttributeSaw } from "./algorithms/mod.ts";
