@@ -21,5 +21,6 @@ SOFTWARE.
 ***************************************************************************** */
 
 import Topsis from "./Topsis.ts";
+import SAW, { Attribute as AttributeSaw } from "./SAW.ts";
 
-export { Topsis };
+export { Topsis, SAW, AttributeSaw };
