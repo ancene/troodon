@@ -26,6 +26,7 @@
 ## Features
 
 - [x] [Topsis](https://en.wikipedia.org/wiki/TOPSIS) algorithm.
+- [x] [Simple Additive Weighting / SAW](https://bit.ly/Simple_additive_weighting) algorithm.
 - [ ] [Analytic Hierarchy Process / AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) algorithm.
 - [ ] [C 4.5](https://en.wikipedia.org/wiki/C4.5_algorithm) algorithm.
 - [ ] [K-Means](https://en.wikipedia.org/wiki/K-means_clustering) algorithm.
@@ -36,7 +37,11 @@
 
 ## Run Example
 
+    # topsis
     deno run ./examples/topsis_example.ts
+
+    # saw
+    deno run ./examples/saw_example.ts
 
 ## Run Test
 
