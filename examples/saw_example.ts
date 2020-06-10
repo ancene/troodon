@@ -22,7 +22,7 @@ SOFTWARE.
 
 import { SAW, AttributeSaw } from "../mod.ts";
 
-// https://aeroyid.wordpress.com/2014/01/16/metodesimple-additive-weighting-saw/
+// Problems example 1: https://aeroyid.wordpress.com/2014/01/16/metodesimple-additive-weighting-saw/
 
 const alternatives = ["Indra", "Roni", "Putri", "Dani", "Ratna", "Mira"];
 const criterias = [
