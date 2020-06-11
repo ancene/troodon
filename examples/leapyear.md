@@ -23,9 +23,9 @@ console.log(isLeapYear(1900));
 ```
 
 ```typescript
-// return {true,2,[2]}
+// return {true,0,[]}
 console.log(listLeapYears(0, 1));
 
-// return {false,2,[2]}
-console.log(listLeapYears(10, 100));
+// return {false,3,[12, 16, 20]}
+console.log(listLeapYears(10, 20));
 ```
