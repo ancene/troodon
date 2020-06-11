@@ -6,7 +6,7 @@
 
 ## About Dinosaurs
 
-🦖 Troodon is a lightweight Deno Library to Handle Algorithms
+🦖 Troodon is a Library for Deno to Handle Algorithms
 
 ## Project Structure
 
