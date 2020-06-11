@@ -1,4 +1,4 @@
-## Topsis Algorithm Examples
+## Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) Algorithm Examples
 
 choose the one you like
 
