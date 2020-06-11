@@ -19,6 +19,9 @@ const kriteria = [
 const bobot = [10, 10, 20, 10, 15, 10, 10, 15];
 const tes = new Topsis(alternatif, kriteria, bobot).result();
 
-Deno.test("Hasil Perhitungan Topsis", () => {
-  assertEquals(tes, ["Teacher B", "Teacher A", "Teacher C"]);
-});
+Deno.test(
+  "Topsis: must be return ['Teacher B', 'Teacher A', 'Teacher C']",
+  () => {
+    assertEquals(tes, ["Teacher B", "Teacher A", "Teacher C"]);
+  }
+);
