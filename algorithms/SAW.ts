@@ -2,10 +2,6 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-/**
- * References :
- */
-
 enum Attribute {
   BENEFIT,
   COST,

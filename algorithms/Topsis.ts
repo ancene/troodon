@@ -2,10 +2,6 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-/**
- * References : https://en.wikipedia.org/wiki/TOPSIS
- */
-
 class Topsis {
   private alternatives: Array<string> = [];
   private criterias: Array<Array<number>> = [];
