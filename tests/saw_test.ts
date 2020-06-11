@@ -16,7 +16,7 @@ const criterias = [
   [80, 80, 80, 80, 80],
   [40, 20, 40, 60, 100],
 ];
-const weights = [20, 20, 15, 10, 30];
+const weights = [20, 20, 15, 10, 35];
 const attributes = [
   AttributeSaw.COST,
   AttributeSaw.BENEFIT,
@@ -26,6 +26,6 @@ const attributes = [
 ];
 const test = new SAW(alternatives, criterias, weights, attributes);
 
-Deno.test("Hasil Perhitungan Topsis", () => {
+Deno.test("Hasil Perhitungan SAW", () => {
   assertEquals(test.result(), ["A3", "A4", "A5", "A2", "A1"]);
 });
