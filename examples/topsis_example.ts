@@ -2,15 +2,8 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-import { Topsis } from "../mod.ts"; // or import { Topsis } from "https://github.com/shandysiswandi/troodon/blob/master/mod.ts";
-
-/**
- * @param ArrayOfNumberOrString (alternatives)
- * @param ArrayOfArrayOfNumber (criterias)
- * @param ArrayOfNumber (weight)
- * @param Boolean default false, change to true for show process
- * Result of Topsis Process or ranking of alternatives
- */
+import { Topsis } from "https://deno.land/x/troodon/mod.ts";
+// OR import { Topsis } from "https://denoland.id/x/troodon/mod.ts";
 
 /**
  * Problems example 1: https://tugasakhir.id/contoh-perhitungan-spk-metode-topsis/

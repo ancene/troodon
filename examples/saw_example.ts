@@ -2,7 +2,8 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-import { SAW, AttributeSaw } from "../mod.ts";
+import { SAW, AttributeSaw } from "https://deno.land/x/troodon/mod.ts";
+// OR import { SAW, AttributeSaw } from "https://denoland.id/x/troodon/mod.ts";
 
 /**
  * Problems example 1: https://aeroyid.wordpress.com/2014/01/16/metodesimple-additive-weighting-saw/
