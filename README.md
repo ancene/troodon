@@ -25,7 +25,7 @@
 
 ## Features
 
-- [x] [Topsis](https://en.wikipedia.org/wiki/TOPSIS) algorithm.
+- [x] [Technique for Order of Preference by Similarity to Ideal Solution / Topsis](https://en.wikipedia.org/wiki/TOPSIS) algorithm.
 - [x] [Simple Additive Weighting / SAW](https://bit.ly/Simple_additive_weighting) algorithm.
 - [x] [Prime Number / Prime](https://en.wikipedia.org/wiki/Prime_number) algorithm.
 - [ ] [Analytic Hierarchy Process / AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) algorithm.
