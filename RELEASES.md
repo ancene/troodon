@@ -2,6 +2,13 @@
 
 Binary releases can be downloaded manually at https://github.com/shandysiswandi/troodon/releases
 
+### 0.2.2 / 2020.06.11
+
+- simplify the Copyright on every file
+- delete `mod.ts` in tests folder
+- change import module from tests folder (`mod.ts`) to root project (`mod.ts`)
+- change import module from examples folder to url
+
 ### 0.2.1 / 2020.06.11
 
 - delete the explicit attribute value in `SAW` class
