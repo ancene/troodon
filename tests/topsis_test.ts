@@ -2,7 +2,8 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-import { assertEquals, Topsis } from "./mod.ts";
+import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+import { Topsis } from "./../mod.ts";
 
 /**
  * Topsis Algorithm Test
