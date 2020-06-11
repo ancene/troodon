@@ -2,6 +2,14 @@
 
 Binary releases can be downloaded manually at https://github.com/shandysiswandi/troodon/releases
 
+### 0.3.0 / 2020.06.12
+
+- Added `PrimeNumber` Algorithm.
+- change example.ts to example.md
+- fixing `saw.test.ts`
+- rename test file (\_test) to (.test)
+- remove mod in algorithms
+
 ### 0.2.2 / 2020.06.11
 
 - simplify the Copyright on every file
