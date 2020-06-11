@@ -9,3 +9,5 @@ import SAW, { Attribute as AttributeSaw } from "./algorithms/SAW.ts";
 export { SAW, AttributeSaw };
 
 export { isPrime, listPrimes } from "./algorithms/PrimeNumber.ts";
+
+export { isLeapYear, listLeapYears } from "./algorithms/LeapYear.ts";
