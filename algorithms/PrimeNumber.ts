@@ -2,11 +2,7 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-interface IPrimes {
-  error: boolean;
-  length: number;
-  result: Array<number>;
-}
+import { IResult } from "./../interface.d.ts";
 
 const isPrime = (value: number): boolean => {
   if (!Number.isInteger(value) || value == 1 || value < 1) return false;
@@ -20,8 +16,8 @@ const isPrime = (value: number): boolean => {
   return true;
 };
 
-const listPrimes = (value: number): IPrimes => {
-  let result: IPrimes;
+const listPrimes = (value: number): IResult => {
+  let result: IResult;
   const temp: Array<number> = [];
 
   if (!Number.isInteger(value) || value == 1 || value < 1)
