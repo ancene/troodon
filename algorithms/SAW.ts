@@ -2,10 +2,7 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-enum Attribute {
-  BENEFIT,
-  COST,
-}
+import { Attribute } from "./../interface.d.ts";
 
 class SAW {
   private alternatives: Array<string> = [];
@@ -252,5 +249,10 @@ class SAW {
   }
 }
 
-export default SAW;
-export { Attribute };
+export const saw = (
+  a: Array<string>,
+  c: Array<Array<number>>,
+  w: Array<number>,
+  attr: Array<Attribute>,
+  process: boolean = false
+) => new SAW(a, c, w, attr, process).result();
