@@ -2,11 +2,13 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-import Topsis from "./algorithms/Topsis.ts";
-export { Topsis };
+export { topsis } from "./algorithms/Topsis.ts";
 
-import SAW, { Attribute as AttributeSaw } from "./algorithms/SAW.ts";
-export { SAW, AttributeSaw };
+export { saw } from "./algorithms/SAW.ts";
+
+export { wpm } from "./algorithms/WPM.ts";
+
+export { Attribute, IResult } from "./interface.d.ts";
 
 export { isPrime, listPrimes } from "./algorithms/PrimeNumber.ts";
 
