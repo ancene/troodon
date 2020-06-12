@@ -3,9 +3,9 @@
 choose the one you like
 
 ```typescript
-import { Topsis } from "https://deno.land/x/troodon/mod.ts"; // Official Third Party Modules
+import { topsis } from "https://deno.land/x/troodon/mod.ts"; // Official Third Party Modules
 // OR
-import { Topsis } from "https://denoland.id/x/troodon/mod.ts"; // Indonesia Third Party Modules
+import { topsis } from "https://denoland.id/x/troodon/mod.ts"; // Indonesia Third Party Modules
 ```
 
 [Problems example 1](https://tugasakhir.id/contoh-perhitungan-spk-metode-topsis)
@@ -19,8 +19,7 @@ const criterias: Array<Array<number>> = [
 ];
 const weight: Array<number> = [5, 3, 4, 2, 5];
 
-const example = new Topsis(alternatives, criterias, weight, true).result();
-console.log(example);
+console.log(topsis(alternatives, criterias, weight, true));
 ```
 
 [Problems example 2](http://serbaserbi-publik.blogspot.com/2016/10/spk-pemilihan-guru-teladan-dengan.html)
@@ -36,6 +35,6 @@ const kriteria = [
 ];
 const bobot = [10, 10, 20, 10, 15, 10, 10, 15];
 
-const example2 = new Topsis(alternatif, kriteria, bobot).result();
+const example2 = topsis(alternatif, kriteria, bobot);
 console.table(example2);
 ```

@@ -284,4 +284,9 @@ class Topsis {
   }
 }
 
-export default Topsis;
+export const topsis = (
+  a: string[],
+  c: number[][],
+  w: number[],
+  p: boolean = false
+) => new Topsis(a, c, w, p).result();
