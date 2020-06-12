@@ -3,3 +3,8 @@ export interface IResult {
   length: number;
   result: Array<number>;
 }
+
+export enum Attribute {
+  BENEFIT,
+  COST,
+}
