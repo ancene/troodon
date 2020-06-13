@@ -2,9 +2,9 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-import { IResult } from "./../interface.d.ts";
+import { IResult } from "./../interfaces.ts";
 
-const isPrime = (value: number): boolean => {
+export const isPrime = (value: number): boolean => {
   if (!Number.isInteger(value) || value == 1 || value < 1) return false;
 
   if (value == 2) return true;
@@ -16,16 +16,17 @@ const isPrime = (value: number): boolean => {
   return true;
 };
 
-const listPrimes = (value: number): IResult => {
+export const listPrimes = (value: number): IResult => {
   let result: IResult;
   const temp: Array<number> = [];
 
-  if (!Number.isInteger(value) || value == 1 || value < 1)
+  if (!Number.isInteger(value) || value == 1 || value < 1) {
     return (result = {
       error: true,
       length: 0,
       result: [],
     });
+  }
 
   for (let i = 2; i <= value; i++) {
     let isPrime: boolean = true;
@@ -44,5 +45,3 @@ const listPrimes = (value: number): IResult => {
     result: temp,
   });
 };
-
-export { isPrime, listPrimes };
