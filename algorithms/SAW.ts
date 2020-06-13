@@ -2,7 +2,7 @@
 Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
-import { Attribute } from "./../interface.d.ts";
+import { Attribute } from "./../enums.ts";
 
 class SAW {
   private alternatives: Array<string> = [];
@@ -45,8 +45,9 @@ class SAW {
     if (!(this.alternatives.length > 0)) this.log("Alternatives empty");
 
     this.alternatives.forEach((value) => {
-      if (value === "" || value.trim() === "")
+      if (value === "" || value.trim() === "") {
         this.log("value of Alternatives at least must be one character");
+      }
     });
   }
 
@@ -57,24 +58,28 @@ class SAW {
   private checkCriterias(): void {
     if (!(this.criterias.length > 0)) this.log("row of Criterias are empty");
 
-    if (this.criterias.length !== this.alternatives.length)
+    if (this.criterias.length !== this.alternatives.length) {
       this.log(
         "row length of Criterias is not equal with The Alternative length"
       );
+    }
 
     this.criterias.forEach((values, indexes) => {
-      if (!(values.length > 0))
+      if (!(values.length > 0)) {
         this.log(`column ${indexes} of Criterias are empty`);
+      }
 
-      if (values.length !== this.weights.length)
+      if (values.length !== this.weights.length) {
         this.log(
           `column ${indexes} length of Criterias is not equal with The Weights length`
         );
+      }
 
-      if (values.length !== this.attributes.length)
+      if (values.length !== this.attributes.length) {
         this.log(
           `The Attributes length of Criterias is not equal with The Weights length`
         );
+      }
     });
   }
 
@@ -88,8 +93,9 @@ class SAW {
     let count: number = 0;
     this.weights.forEach((value) => {
       count += value;
-      if (!Number.isInteger(value))
+      if (!Number.isInteger(value)) {
         this.log(`value ${value} of Weights is not integer`);
+      }
     });
 
     if (count != 100) this.log("total value of weights must be 100");
