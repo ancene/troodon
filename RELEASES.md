@@ -2,6 +2,17 @@
 
 Binary releases can be downloaded manually at https://github.com/shandysiswandi/troodon/releases
 
+### 0.4.0 / 2020.06.13
+
+- add: `interfaces.ts`
+- add: `enums.ts`
+- feature: `leapyear` algorithm
+- feature: `wpm` algorithm
+- change: export class topsis to function
+- change: export class saw to function
+- change: rename all file to lowercase
+- improve: improve code
+
 ### 0.3.0 / 2020.06.12
 
 - Added `PrimeNumber` Algorithm.
