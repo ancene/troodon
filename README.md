@@ -18,6 +18,8 @@
     ├── tests           # List of Algorithm Test
     │ └── ...
     ├── .gitignore
+    ├── enums.ts        # list of enum type
+    ├── interfaces.ts   # list of interface type
     ├── LICENSE
     ├── mod.ts          # just import this file to use this library
     ├── README.md
