@@ -44,6 +44,7 @@ All the following algorithms modules are exposed in `mod.ts`
 - [SAW Example](/examples/saw.md)
 - [Prime Example](/examples/prime.md)
 - [Leap Year Example](/examples/leapyear.md)
+- [WPM Example](/examples/wpm.md)
 
 ## Run Test
 
