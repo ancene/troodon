@@ -31,7 +31,7 @@
 - [x] [Simple Additive Weighting / SAW](https://bit.ly/Simple_additive_weighting) algorithm.
 - [x] [Prime Number / Prime](https://en.wikipedia.org/wiki/Prime_number) algorithm.
 - [x] [Leap Year](https://id.wikipedia.org/wiki/Leap_Year) algorithm.
-- [ ] [Weighted Product Model / WPM](https://en.wikipedia.org/wiki/Weighted_product_model) algorithm.
+- [x] [Weighted Product Model / WPM](https://en.wikipedia.org/wiki/Weighted_product_model) algorithm.
 - [ ] [Analytic Hierarchy Process / AHP](https://en.wikipedia.org/wiki/Analytic_hierarchy_process) algorithm.
 
 ## Usage
