@@ -3,7 +3,7 @@ Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { isLeapYear, listLeapYears } from "./../mod.ts";
+import { isLeapYear, listLeapYears } from "./../algorithms/leap_year.ts";
 
 /**
  * is Leap Year

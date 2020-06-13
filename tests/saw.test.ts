@@ -3,7 +3,8 @@ Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { saw, Attribute } from "./../mod.ts";
+import { saw } from "./../algorithms/saw.ts";
+import { Attribute } from "./../enums.ts";
 
 /**
  * Simple Additive Weighting Algorithm Test

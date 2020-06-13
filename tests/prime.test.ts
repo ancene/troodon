@@ -3,7 +3,7 @@ Copyright (c) the Trodoon authors. All rights reserved. MIT License.
 ***************************************************************************** */
 
 import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { isPrime, listPrimes } from "./../mod.ts";
+import { isPrime, listPrimes } from "./../algorithms/prime_number.ts";
 
 /**
  * Prime Number
