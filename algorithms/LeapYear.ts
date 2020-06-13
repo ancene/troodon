@@ -11,12 +11,13 @@ const listLeapYears = (s: number, e: number): IResult => {
   let result: IResult;
   const temp: Array<number> = [];
 
-  if (s < 1 || !Number.isInteger(s) || !Number.isInteger(e))
+  if (s < 1 || !Number.isInteger(s) || !Number.isInteger(e)) {
     return (result = {
       error: true,
       length: 0,
       result: [],
     });
+  }
   console.time("T1");
   for (let i = s; i <= e; i++) {
     if (isLeapYear(i)) temp.push(i);
