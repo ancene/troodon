@@ -20,12 +20,13 @@ const listPrimes = (value: number): IResult => {
   let result: IResult;
   const temp: Array<number> = [];
 
-  if (!Number.isInteger(value) || value == 1 || value < 1)
+  if (!Number.isInteger(value) || value == 1 || value < 1) {
     return (result = {
       error: true,
       length: 0,
       result: [],
     });
+  }
 
   for (let i = 2; i <= value; i++) {
     let isPrime: boolean = true;
