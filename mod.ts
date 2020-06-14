@@ -9,3 +9,4 @@ export * from "./algorithms/prime_number.ts";
 export * from "./algorithms/leap_year.ts";
 export * from "./enums.ts";
 export * from "./interfaces.ts";
+export * from "./utils.ts";

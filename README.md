@@ -1,4 +1,4 @@
-[![Troodon](https://raw.githubusercontent.com/shandysiswandi/troodon/master/troodon.jpg)](#)
+[![Troodon](https://raw.githubusercontent.com/shandysiswandi/troodon/master/_.jpg)](#)
 
 [![tag](https://img.shields.io/github/v/tag/shandysiswandi/troodon.svg?sort=semver)](https://github.com/shandysiswandi/troodon)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/shandysiswandi/troodon/blob/master/LICENSE)
@@ -17,13 +17,14 @@
     │ └── ...
     ├── tests           # List of Algorithm Test
     │ └── ...
+    ├── _.jpg           # mascot : Powered by toppng.com and vectorstock.com
     ├── .gitignore
     ├── enums.ts        # list of enum type
     ├── interfaces.ts   # list of interface type
     ├── LICENSE
     ├── mod.ts          # just import this file to use this library
     ├── README.md
-    └── trodoon.jpg     # mascot : Powered by toppng.com and vectorstock.com
+    └── utils.ts        # list of function helper
 
 ## Features
 
