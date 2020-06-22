@@ -17,15 +17,11 @@ export const isPrime = (value: number): boolean => {
 };
 
 export const listPrimes = (value: number): IResult => {
-  let result: IResult;
+  let result: IResult = { error: true, length: 0, result: [] };
   const temp: Array<number> = [];
 
   if (!Number.isInteger(value) || value == 1 || value < 1) {
-    return (result = {
-      error: true,
-      length: 0,
-      result: [],
-    });
+    return result;
   }
 
   for (let i = 2; i <= value; i++) {
@@ -39,9 +35,6 @@ export const listPrimes = (value: number): IResult => {
     if (isPrime) temp.push(i);
   }
 
-  return (result = {
-    error: false,
-    length: temp.length,
-    result: temp,
-  });
+  result = { error: false, length: temp.length, result: temp };
+  return result;
 };
