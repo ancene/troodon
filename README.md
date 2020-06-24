@@ -3,6 +3,8 @@
 [![tag](https://img.shields.io/github/v/tag/shandysiswandi/troodon.svg?sort=semver)](https://github.com/shandysiswandi/troodon)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/shandysiswandi/troodon/blob/master/LICENSE)
 [![tag](https://img.shields.io/badge/deno->=1.0.0-green.svg)](https://github.com/denoland/deno)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/shandysiswandi/troodon.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/shandysiswandi/troodon/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/shandysiswandi/troodon.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/shandysiswandi/troodon/context:javascript)
 
 ## About Dinosaurs
 
