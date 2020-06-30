@@ -19,7 +19,7 @@
     │ └── ...
     ├── tests           # List of Algorithm Test
     │ └── ...
-    ├── _.jpg           # mascot : Powered by toppng.com and vectorstock.com
+    ├── _.png           # mascot : Powered by toppng.com and vectorstock.com
     ├── .gitignore
     ├── enums.ts        # list of enum type
     ├── interfaces.ts   # list of interface type
