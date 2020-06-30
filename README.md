@@ -1,4 +1,4 @@
-[![Troodon](https://raw.githubusercontent.com/shandysiswandi/troodon/master/_.jpg)](#)
+[![Troodon](https://raw.githubusercontent.com/shandysiswandi/troodon/master/_.png)](#)
 
 [![tag](https://img.shields.io/github/v/tag/shandysiswandi/troodon.svg?sort=semver)](https://github.com/shandysiswandi/troodon)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/shandysiswandi/troodon/blob/master/LICENSE)
