@@ -2,6 +2,14 @@
 
 Binary releases can be downloaded manually at https://github.com/shandysiswandi/troodon/releases
 
+
+### 0.4.1 / 2020.06.30
+
+- change mascot 
+- add util matrix function
+- fix leap_year algorithm
+- fix prime_number algorithm
+
 ### 0.4.0 / 2020.06.13
 
 - add: `interfaces.ts`
